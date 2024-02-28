@@ -1,18 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { RouterProvider } from 'react-router-dom';
+import router from '@/router';
 // Antd组件库安装 汉化
-import { ConfigProvider } from 'antd'
-import zhCN from 'antd/locale/zh_CN.js'
-import Login from './views/Login.jsx';
-import App from './App.jsx'
-import './index.sass'
+import { ConfigProvider } from 'antd';
+import zhCN from 'antd/locale/zh_CN.js';
+import List from '@/components/pokemon/List.jsx';
+import Main from '@/views/Main.jsx';
+
+import '@/index.less';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
 root.render(
   <ConfigProvider locale={zhCN}>
-    <div className='box'>你好！</div>
-    <div>
-      <App></App>
-    </div>
+    <>
+      <RouterProvider router={router} />
+      <List></List>
+      {/* <Main /> */}
+    </>
   </ConfigProvider>
 );

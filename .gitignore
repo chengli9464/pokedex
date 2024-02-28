@@ -2,6 +2,7 @@
 
 # dependencies
 /node_modules
+/exercise
 /.pnp
 .pnp.js
 
